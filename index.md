@@ -12,8 +12,7 @@ This project leverages natural language processing (NLP) and machine learning to
 ## 🎯 Project Objectives
 
 ### 🧩 Business Goals Achieved
-- **Data Collection and Assessment**: Gathered data on pricing trends, booking patterns, guest feedback, and property features.
-- Benchmarked top-performing competitors to extract replicable strategies.
+- **Data Collection and Assessment**: Gathered data on pricing trends, booking patterns, guest feedback, and property features. Benchmarked top-performing competitors to extract replicable strategies.
 - **Competitor Analysis**: Identified and analysed successful Airbnb listings in the local market to determine the factors associated with high occupancy.
 - **Optimisation Recommendations**: Developed strategies to enhance the company’s property listings.
 
