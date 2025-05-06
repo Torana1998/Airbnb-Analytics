@@ -1,116 +1,76 @@
 ---
-layout: default
-title: Airbnb-lytics Project
+title: "Sole Fitness Business Analytics"
 ---
 
-# 📍 Airbnb-lytics — Data-Driven Insights to Enhance Airbnb Occupancy
+# 🏋️ Sole Fitness Business Analytics Project
 
-This project leverages natural language processing (NLP) and machine learning to help **SingStay**, a fictitious short-term rental business, optimise its Airbnb occupancy strategy.
-
----
-
-## 🎯 Project Objectives
-
-### 🧩 Business Goals Achieved
-- **Data Collection and Assessment**: Gathered data on pricing trends, booking patterns, guest feedback, and property features. Benchmarked top-performing competitors to extract replicable strategies.
-- **Competitor Analysis**: Identified and analysed successful Airbnb listings in the local market to determine the factors associated with high occupancy.
-- **Optimisation Recommendations**: Developed strategies to enhance the company’s property listings.
-
-### 🧪 Technical Goals Achieved 
-- Applied text analytics (TF-IDF, word clouds, and n-gram analysis) to extract language used by hosts in highly rated listings.
-- Conducted topic modelling (LDA) on listings and reviews to uncover recurring themes.
-- Performed sentiment analysis using **TextBlob** and **BERT**.
-- Built a **Random Forest** model to predict occupancy, achieving an **R² score of 0.79**.
+This project was completed as part of the NUS Master of Technology in Enterprise Business Analytics programme.  
+We collaborated with a Singapore-based e-commerce SME to integrate analytics by creating a unified database, formulating metrics to diversify revenue, and optimising advertising expenditure.
 
 ---
 
-## 📈 Key Business Insights Gained
+## 🎯 Project Highlights
 
-Insights from predictive modelling and text analysis were grouped into six actionable areas to guide SingStay's occupancy strategy:
+- 📦 **Data Integration**: Designed a normalised **PostgreSQL** database consolidating website, Shopee, and Lazada sales data.
+- 📊 **Dashboard Development**: Built **Power BI** dashboards to visualise sales trends, product performance, and business KPIs.
+- 🧠 **Clustering Analysis**: Applied **K-Means** clustering to segment products and identify underperformers for revenue diversification.
+- 📈 **Ad Spend Optimisation**: Created a **ROAS** (Return on Ad Spend) metric and used correlation analysis to uncover inefficiencies, enabling a **4% reduction in advertising costs**.
 
-- **🏠 Amenities:** Listings with private entrances, security cameras, workspaces, and TVs drive higher occupancy.  
-  → *Recommendation:* Standardise these across properties to boost guest appeal.
-
-- **📊 Listing Performance:** Review volume, guest ratings, and host responsiveness are strong occupancy drivers.  
-  → *Recommendation:* Encourage post-stay reviews and maintain Superhost service standards.
-
-- **📆 Booking Policies:** Flexibility (8–60 nights) in stay limits is associated with better performance.  
-  → *Recommendation:* Re-evaluate booking policies to optimise length-of-stay rules.
-
-- **📝 Review Themes:** Guests value comfort, location, and unique touches (e.g., thematic design, personalised service).  
-  → *Recommendation:* Emphasise comfort in listings and explore differentiated experiences.
-
-- **📍 Location:** Fringe areas like Marina South and Tuas show untapped demand despite fewer listings.  
-  → *Recommendation:* Expand into these regions and improve transport/accessibility.
-
-- **💰 Pricing Strategy:** Listings priced between $301–$500 and 1-room units show the highest average occupancy.  
-  → *Recommendation:* Align pricing strategies to data-backed bands and promote high-performing unit types.
-
-**Future Strategy:**  
-Retrain models with new data over time, apply temporal analysis, and explore advanced ML (e.g., XGBoost) for ongoing optimisation.
+> 💡 *Note: As this project was conducted for a live business, datasets are confidential. However, the report and code provide sufficient context to understand the scope and solutions delivered.*
 
 ---
 
-## 📂 Datasets
+## 🧰 Entity-Relationship Diagram
 
-Data sourced from [Inside Airbnb](http://insideairbnb.com/get-the-data.html) – Singapore listings:
+![ERD](./assets/Physical%20ERD.png)
 
-- `listings.csv`: Raw listing data  
-- `reviews.csv`: Guest review data  
+Pysical ERD based on logical ERD was developed to link sales, ads, product metadata, and calendar dimensions.
+
+---
+
+## 📊 Interactive Dashboards Created
+
+### 🔹 Sales Trend Overview
+![Sales Trend](./assets/Sales%20Trend%20Dashboard.png)
+
+### 🔹 Category Performance
+![Category Dashboard](./assets/Revenue%20Driver%20Score%20Dashboard.jpg)
+
+### 🔹 Advertising Spend Efficiency
+![Ad Spend](./assets/ROAS%20Dashboard.png)
+
+---
+
+## 📁 Project Files
+
+| File | Description |
+|------|-------------|
+| `01 - postgreSQL database.sql` | SQL script for creating the data warehouse schema. |
+| `02 - sole-fitness-clustering.ipynb` | Python notebook for clustering analysis on product metrics. |
+| `03 - sole-fitness-dashboards.pbix` | Power BI dashboard visualising multi-platform performance. |
+| `04 - sole-fitness-project-report.pdf` | Final project report with full methodology, visuals, and recommendations. |
 
 ---
 
 ## 🧰 Tools & Technologies
 
-| Category               | Tools & Libraries                                                  |
-|------------------------|---------------------------------------------------------------------|
-| **Programming**        | Python (`pandas`, `matplotlib`, `seaborn`)                         |
-| **Machine Learning**   | `scikit-learn`, `Random Forest`                                    |
-| **NLP & Text Analysis**| `TF-IDF`, `n-grams`, `TextBlob`, `BERT`, `Gensim` (LDA), `pyLDAvis` |
-| **Environment**        | Google Colab                                                       |
+| Category            | Tools Used                                      |
+|---------------------|-------------------------------------------------|
+| **Database**        | PostgreSQL                                      |
+| **Programming**     | Python (`pandas`, `scikit-learn`, `matplotlib`) |
+| **Visualisation**   | Power BI                                        |
+| **Machine Learning**| K-Means Clustering                              |
+| **ETL & Modelling** | SQL, Google Colab, Excel                        |
 
 ---
 
-## 🗂️ File Descriptions
+## 🧾 Report Overview
 
-### 📁 01 - Raw Data
-
-| File Name       | Description                      |
-|-----------------|----------------------------------|
-| `listings.csv`  | Raw Airbnb listings data         |
-| `reviews.csv`   | Raw guest reviews data           |
+- Integrated sales and ad data from website, Shopee, and Lazada on a unified PostgreSQL database. 
+- Formulated KPIs like Revenue Driver Score (RDS) and ROAS.
+- Delivered Power BI dashboards to reduce platform over-reliance and optimise ad ROI.
+- Proposed data-backed recommendations to diversify revenue and streamline ad spend.
 
 ---
-
-### 📁 02 - Dimensional Data
-
-| File Name               | Description                                             |
-|-------------------------|---------------------------------------------------------|
-| `dim_listings.csv`      | Structured listing metadata                             |
-| `dim_hosts.csv`         | Host profiles with Superhost status, response rate      |
-| `dim_reviews.csv`       | Cleaned and tokenised reviews for text analysis         |
-| `fact_availability.csv` | Derived occupancy indicators for modelling              |
-
----
-
-### 📁 03 - Notebooks
-
-| Notebook                           | Purpose                                                                  |
-|-----------------------------------|--------------------------------------------------------------------------|
-| `1_data_cleaning.ipynb`           | Data transformation and cleansing                                        |
-| `2_text_translation_p1.ipynb`     | Part 1 – Translating and tokenising non-English reviews                  |
-| `3_text_translation_p2.ipynb`     | Part 2 – Continued processing of translated text                         |
-| `4_eda_predictive_modelling.ipynb`| Exploratory analysis and Random Forest modelling                         |
-| `5_text_analytics.ipynb`          | TF-IDF analysis, n-gram extraction, word cloud generation                |
-| `6_sentiment_analysis.ipynb`      | Sentiment comparison using TextBlob and BERT                             |
-
----
-
-### 📄 04 - Project Report
-
-| File Name            | Description                                                                 |
-|----------------------|-----------------------------------------------------------------------------|
-| `Project Report.pdf` | Comprehensive project summary with visualisations and business recommendations |
-
 
 🔗 [Back to Portfolio](https://torana1998.github.io/)
