@@ -111,3 +111,6 @@ Data sourced from [Inside Airbnb](http://insideairbnb.com/get-the-data.html) –
 | File Name            | Description                                                                 |
 |----------------------|-----------------------------------------------------------------------------|
 | `Project Report.pdf` | Comprehensive project summary with visualisations and business recommendations |
+
+
+🔗 [Back to Portfolio](https://torana1998.github.io/)
